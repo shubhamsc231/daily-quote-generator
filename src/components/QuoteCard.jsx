@@ -20,15 +20,12 @@ const QuoteCard = () => {
     setloading(false);
   };
 
-  if (!quoteData) {
-    return <div>Loading...</div>;
-  }
   const handleClick = () => {
     fetchData();
   };
 
   return (
-    <section className="w-3/6 bg-white  rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-5">
+    <section className="w-3/6 sm:w-5/6 bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-5">
       <>
         <h3 className="text-3xl">Quote of the Day</h3>
         {quoteData && !loading ? (
