@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
 const QuoteCard = () => {
   const [quoteData, setquoteData] = useState();
   const [loading, setloading] = useState(false);
@@ -23,9 +23,21 @@ const QuoteCard = () => {
   const handleClick = () => {
     fetchData();
   };
-
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText(`${quoteData?.quote}`);
+    toast("Copied to Clipboard!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
+  };
   return (
-    <section className="w-3/6 sm:w-5/6 bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-5">
+    <section className="w-3/6 sm:w-full sm:m-4 bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center gap-5">
       <>
         <h3 className="text-3xl">Quote of the Day</h3>
         {quoteData && !loading ? (
@@ -42,8 +54,7 @@ const QuoteCard = () => {
           -{quoteData?.author}
         </h3>
         <hr />
-        <div>
-          <div></div>
+        <div className="w-full flex items-center justify-center gap-5">
           <button
             className="bg-[#5372F0] p-3 rounded-xl text-white font-bold disabled-opacity-5 hover:bg-[#3f5cd9] transition-all duration-300 ease-in-out"
             onClick={() => handleClick()}
@@ -51,8 +62,15 @@ const QuoteCard = () => {
           >
             {loading ? `Loading...` : `New Quote`}{" "}
           </button>
+          <button
+            className="bg-[#5372F0] p-3 rounded-xl text-white font-bold disabled-opacity-5 hover:bg-[#3f5cd9] transition-all duration-300 ease-in-out"
+            onClick={handleCopyClick}
+          >
+            Copy to Clipboard
+          </button>
         </div>
       </>
+      <ToastContainer />
     </section>
   );
 };
