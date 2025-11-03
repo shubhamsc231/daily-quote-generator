@@ -50,9 +50,9 @@ const QuoteCard = () => {
             <div className="bg-gray-200 p-2 w-2/6"></div>
           </>
         )}
-        <h3 className="text-lg italic font-light text-gray-400 self-end">
+        <strong className="text-lg italic font-light text-gray-400 self-end">
           -{quoteData?.author}
-        </h3>
+        </strong>
         <hr />
         <div className="w-full flex items-center justify-center gap-5">
           <button
