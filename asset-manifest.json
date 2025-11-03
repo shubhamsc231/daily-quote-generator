@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/daily-quote-generator/static/css/main.51ebe7f7.css",
-    "main.js": "/daily-quote-generator/static/js/main.209f4c0c.js",
+    "main.css": "/daily-quote-generator/static/css/main.1763c52d.css",
+    "main.js": "/daily-quote-generator/static/js/main.229ed839.js",
     "static/js/453.19f102e9.chunk.js": "/daily-quote-generator/static/js/453.19f102e9.chunk.js",
     "index.html": "/daily-quote-generator/index.html",
-    "main.51ebe7f7.css.map": "/daily-quote-generator/static/css/main.51ebe7f7.css.map",
-    "main.209f4c0c.js.map": "/daily-quote-generator/static/js/main.209f4c0c.js.map",
+    "main.1763c52d.css.map": "/daily-quote-generator/static/css/main.1763c52d.css.map",
+    "main.229ed839.js.map": "/daily-quote-generator/static/js/main.229ed839.js.map",
     "453.19f102e9.chunk.js.map": "/daily-quote-generator/static/js/453.19f102e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51ebe7f7.css",
-    "static/js/main.209f4c0c.js"
+    "static/css/main.1763c52d.css",
+    "static/js/main.229ed839.js"
   ]
 }
